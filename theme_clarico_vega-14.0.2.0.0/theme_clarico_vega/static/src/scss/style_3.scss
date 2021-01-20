@@ -159,7 +159,8 @@ body.editor_enable
 .wrapwrap_trans
 {
 	margin-left:300px !important;
-	@include transition(null,0.5s)
+	@include transition(null,0.5s);
+	z-index: initial !important;
 }
 
 .te_shop_breadcrumb
@@ -1159,6 +1160,7 @@ body.editor_enable
 	>p.text-muted
 	{
 		color: nth($f_color,1) !important;
+		font-size: inherit;
 	}
 	.o_website_rating_static {
         margin-bottom: 0.5rem;
@@ -1393,7 +1395,8 @@ h1.te_product_name
 }
 .te_prod_desc
 {
-	@include style(1,1,inherit);
+	font-size: inherit;
+	color:nth($f_color,1);
     margin-bottom: 0.5rem;
 	@include media-breakpoint-down(lg)
 	{
@@ -1441,7 +1444,8 @@ h1.te_product_name
 			display:inline;
 			> a
 			{
-				@include style(2,9,inherit);
+				font-size: inherit;
+				color:nth($f_color,9);
 				&:hover
 				{
 					color:nth($f_color,19);
@@ -1452,7 +1456,7 @@ h1.te_product_name
 		{
 			li.breadcrumb-item > a,li.breadcrumb-item > span
 			{
-				font-size:nth($f_sizes,3);
+				font-size: inherit;
 			}
 		}
 	}
@@ -1491,7 +1495,7 @@ h1.te_product_name
 {
 	#product_details > p,#discussion,#product_specifications
 	{
-		font-size:nth($f_sizes,3);
+		font-size: inherit;
 	}
 }
 #product_option_block
